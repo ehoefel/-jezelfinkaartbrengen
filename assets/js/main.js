@@ -80,9 +80,9 @@ jQuery(document).ready(function($) {
             // increment slide number by n and keep within boundaries
             currSlide = Math.min(Math.max(0, currSlide + n), $slide.length-1);
             
-            var displacment = window.innerWidth*currSlide;
+            var displacment = window.innerHeight*currSlide;
             // translate slides div across to appropriate slide
-            $slides.css('transform', 'translateX(-' + displacment + 'px)');
+            $slides.css('transform', 'translateY(-' + displacment + 'px)');
             // delay before rebinding event to prevent retriggering
             setTimeout(bind, 700);
             
@@ -113,8 +113,8 @@ jQuery(document).ready(function($) {
       
         $(window).resize(function(){
           // Keep current slide to left of window on resize
-          var displacment = window.innerWidth*currSlide;
-          $slides.css('transform', 'translateX(-'+displacment+'px)');
+          var displacment = window.innerHeight*currSlide;
+          $slides.css('transform', 'translateY(-'+displacment+'px)');
         });
         
         // cache
