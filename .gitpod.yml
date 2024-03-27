@@ -4,14 +4,13 @@ image: gitpod/workspace-full
 ports:
     - port: 1313
       onOpen: open-preview
-      name: Website
-      description: Website Preview
-      visibility: private
+      name: Jezelf in Kaart Brengen
+      description: Jezelf in Kaart Brengen
+      visibility: public
       protocol: https
 
 tasks:
   - before: >
-      sudo apt-get install -y hugo &&
       [[ ! -z $GITCONFIG  ]] &&
       echo $GITCONFIG | base64 -d > ~/.gitconfig &&
       chmod 644 ~/.gitconfig &&
