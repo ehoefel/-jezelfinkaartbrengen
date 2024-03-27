@@ -148,7 +148,10 @@ https://www.tooplate.com/view/2113-earth
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 html {
@@ -213,7 +216,7 @@ nav ul {
   -ms-flex-direction: column;
   flex-direction: column;
 	-ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: stretch;
 }
 nav ul li {
 	text-align: center;
@@ -237,6 +240,7 @@ nav a {
 
 nav a * {
 	transition: all .5s ease-in-out;
+	font-weight: 600;
 }
 
 nav a.active {
@@ -357,14 +361,17 @@ nav a::before {
   background-size: cover;
   overflow: hidden;
 }
-#image-slider ul li:nth-child(1) {
+.slides .slide:nth-child(1) .active-img {
   background-image: url(../images/full-bg-01.png);
 }
-#image-slider ul li:nth-child(2) {
-  background-image: url(../images/full-bg-02.jpg);
+.slides .slide:nth-child(2) .active-img {
+  background-image: url(../images/full-bg-02.png);
 }
-#image-slider ul li:nth-child(3) {
-  background-image: url(../images/full-bg-03.jpg);
+.slides .slide:nth-child(3) .active-img {
+  background-image: url(../images/full-bg-03.png);
+}
+.slides .slide:nth-child(4) .active-img {
+  background-image: url(../images/full-bg-04.png);
 }
 #image-slider ul li.active-img{
   left: 0;
