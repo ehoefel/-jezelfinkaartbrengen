@@ -185,6 +185,17 @@ nav ul li a {
 	text-align: center;
 }
 
+nav ul li a * {
+	text-align: center;
+}
+
+nav ul li a i {
+    vertical-align: middle;
+    border-style: none;
+    font-size: 2rem;
+
+}
+
 nav ul {
 	position: relative;
   top: 50%;
@@ -205,23 +216,41 @@ nav ul {
 }
 nav ul li {
 	text-align: center;
-	margin: 5px 0px;
+	margin: 0;
 }
-nav a, nav a:visited, nav a:active {
+
+nav a, nav a:visited {
   color: #fff;
 }
+
 nav a {
 	text-decoration: none!important;
 	display: inline-block;
-	width: 140px;
-	padding: 15px 0px;
+	width: max(140px, 100%);
+	padding: 20px 0px;
 	position: relative;
 	z-index: 0;
 	transition: all .5s;
 }
+
 nav a.active {
   background-color: rgba(0,0,0,0.8);
+  color: #00b350;
 }
+
+nav a.active * {
+  color: #00b350;
+}
+
+nav ul li a:not(:active):hover, nav ul li a:not(:active):hover * {
+	color: #00b350AA;
+}
+
+nav ul li a:not(:active):hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+
 nav a::before {
   content: "";
   position: absolute;
