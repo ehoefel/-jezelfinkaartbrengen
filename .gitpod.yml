@@ -1,0 +1,28 @@
+image: gitpod/workspace-full
+
+# Ports to expose on workspace startup
+ports:
+    - port: 1313
+      onOpen: open-preview
+      name: Website
+      description: Website Preview
+      visibility: private
+      protocol: https
+
+tasks:
+  - before: >
+      sudo apt-get install -y hugo &&
+      [[ ! -z $GITCONFIG  ]] &&
+      echo $GITCONFIG | base64 -d > ~/.gitconfig &&
+      chmod 644 ~/.gitconfig &&
+      mkdir -p ~/.ssh &&
+      [[ ! -z $SSH_PUBLIC_KEY  ]] &&
+      echo $SSH_PUBLIC_KEY > ~/.ssh/id_rsa.pub &&
+      chmod 644 ~/.ssh/id_rsa.pub &&
+      [[ ! -z $SSH_PRIVATE_KEY  ]] &&
+      echo $SSH_PRIVATE_KEY | base64 -d > ~/.ssh/id_rsa &&
+      chmod 600 ~/.ssh/id_rsa &&
+      echo $VIMRC | base64 -d > ~/.vimrc &&
+      chmod 600 ~/.vimrc &&
+      sed -i "s|https.*-jezelfinkaartbrengen.git|git@github.com:ehoefel/-jezelfinkaartbrengen.git|" /workspace/-jezelfinkaartbrengen/.git/config
+
