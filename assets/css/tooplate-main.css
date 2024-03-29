@@ -287,13 +287,18 @@ nav a::before {
   background-size: cover;
 }
 .slides .slide .content {
-  overflow-y: scroll;
   position: relative;
-  width: 80%;
-  height: 80%;
-  left: 20%;
-  top: 10%;
+  width: 100%;
+  height: 100%;
+  left: 0;
 }
+
+.content .ui-tabs {
+    padding-top: 2rem;
+    height: 100%;
+    padding-bottom: 2rem;
+}
+
 .content::-webkit-scrollbar {
   display: none!important;
   opacity: 0!important;
@@ -314,15 +319,15 @@ nav a::before {
 
 }
 .slides .slide:nth-child(2) {
-  background-image: url(../images/about-bg.jpg);
+  background-image: url(../images/full-bg-02.png);
   background-position: fixed;
 }
 .slides .slide:nth-child(3) {
-  background-image: url(../images/gallery-bg.jpg);
+  background-image: url(../images/full-bg-03.png);
   background-position: fixed;
 }
 .slides .slide:nth-child(4) {
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(../images/full-bg-04.png);
   background-position: fixed;
 }
 
@@ -422,6 +427,7 @@ nav a::before {
   text-transform: uppercase;
   font-weight: 900;
   color: #fff;
+  text-shadow: 5px 3px 3px black;
 }
 
 
@@ -432,14 +438,24 @@ nav a::before {
 	top: 180%!important;
 	transform: translateY(-180%);
 }
+
 #tabs {
-  float: right;
-  margin-right: 0px;
+  width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-bottom: 0;
 }
 #tabs ul {
   margin: 0;
   padding: 0;
   float: left;
+    margin-left: 5rem;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 #tabs ul li {
   margin-top: 5px;
@@ -486,10 +502,12 @@ nav a::before {
   margin-left: 60px;
   width: 585px;
   text-align: left;
-  display: inline-block;
-  background: #fff;
+  display: content;
+  background: none;
   margin-right: 30px;
   padding: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .tabs-content h2 {
   font-size: 29px;
@@ -508,6 +526,7 @@ nav a::before {
   color: #7a7a7a;
   margin-top: 30px;
   margin-bottom: 0px;
+  font-weight: 600;
 }
 
 
@@ -643,12 +662,12 @@ nav a::before {
 
   .slides .slide .content {
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	left: 0;
   }
   .second-content {
-	top: 250%!important;
-	transform: translateY(-250%);
+	top: 180%!important;
+	/*transform: translateY(-250%);*/
   }
   .third-content {
 	top: 140%!important;
@@ -681,11 +700,12 @@ nav a::before {
   nav {
     top: 0vh;
     height: 100px;
-    width: 85vw;
-    margin-left: 15vw;
+    width: 100vw;
+    padding: 0 10vw;
   }
   nav ul {
     flex-direction: row;
+    justify-content: space-around;
   }
   nav ul li {
     display: inline;
@@ -710,14 +730,38 @@ nav a::before {
   .slide-caption h2 {
   	font-size: 48px;
   }
+
   .tabs-content {
     width: auto;
     text-align: center;
-    margin: 0px 30px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
   }
+
+  .tabs-content article {
+    margin: 2rem 30px;
+    padding: 20px;
+    box-shadow: 8px 8px 20px black;
+    background: #faf5b2;
+    overflow: scroll;
+    max-height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+  }
+
   .tabs-content p {
     margin-top: 20px;
+  }
+  #tabs {
+	  width: 100%;
+	  height: 100%;
+	  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 0;
+    padding-left: 0;
   }
   #tabs ul li {
     display: inline-block;
@@ -725,9 +769,10 @@ nav a::before {
   }
   #tabs ul {
     float: none;
-    margin-bottom: 30px;
     width: 100%;
     text-align: center;
+    margin-bottom: 2rem;
+    margin-left: 0;
   }
   #thumbnail ul li {
     max-width: 80px;
@@ -753,8 +798,16 @@ nav a::before {
     margin-top: 10px;
     padding-bottom: 30px;
   }
+  .tabs-content {
+    margin: 0;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+    overflow: hidden;
+  }
   .tabs-content h2 {
-    font-size: 21px;
+    font-size: 26px;
   }
   .third-slide {
     text-align: center;

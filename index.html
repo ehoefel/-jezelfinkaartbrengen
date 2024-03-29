@@ -66,17 +66,45 @@ https://www.tooplate.com/view/2113-earth
             </div>
           </div>
           <div class="slide" id="2">
-            <div id="slider-wrapper">
-              <div id="image-slider">
-                <ul>
-                  <li class="active-img">
-                    <div class="slide-caption">
-	      	     <h2>Natuuroefeningen</h2>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <div class="content second-content">
+      <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<section class="tabs-content">
+          <article id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false" style="background: none; box-shadow: none;">
+	    <h2 style="color: white; text-shadow: 5px 3px 3px black;">Natuuroefeningen</h2>
+          </article>
+          <article id="tabs-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+            <h2>What We Do?</h2>
+            <span>Ut nec metus eros</span>
+            <p>Nunc ultricies lectus et sem interdum molestie. Donec non sagittis velit. Vivamus vitae dictum metus, id imperdiet diam. Vestibulum elementum urna erat, eu tincidunt nisl pulvinar nec. Nulla a pharetra felis, sit amet placerat felis. Fusce a tincidunt dui.</p>
+            <p>Quisque blandit purus orci, et cursus ante porttitor in. Curabitur eleifend turpis id diam ultricies hendrerit. Donec et lectus vitae justo porta molestie.</p>
+          </article>
+          <article id="tabs-3" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+            <h2>Who We Are?</h2>
+            <span>Etiam tempus ex ut mi</span>
+            <p>Vivamus dictum odio at enim posuere, et dapibus nunc sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>Integer a egestas tellus, id malesuada velit. Pellentesque tincidunt, libero eu rutrum volutpat, nisi urna mollis felis, sed mollis sem libero at magna.</p>
+          </article>
+        </section>
+        <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+          <li style="display: none;" class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true">
+		  <a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">
+			  <span class="fa fa-desktop"></span>
+		  </a>
+	  </li>
+          <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false">
+		  <a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">
+			  <span class="fa fa-users"></span>
+		  </a>
+	  </li>
+          <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false">
+		  <a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">
+			  <span class="fa fa-mobile"></span>
+		  </a>
+	  </li>
+        </ul>
+        
+      </div>
+    </div>
           </div>
           <div class="slide" id="3">
             <div id="slider-wrapper">
@@ -92,15 +120,16 @@ https://www.tooplate.com/view/2113-earth
             </div>
           </div>
           <div class="slide" id="4">
-            <div id="slider-wrapper">
-              <div id="image-slider">
-                <ul>
-                  <li class="active-img">
-                    <div class="slide-caption">
-	      	     <h2>Over het Project</h2>
-                    </div>
-                  </li>
-                </ul>
+            <div class="content" style="padding-top: 100px;">
+              <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" style="padding-top: 2rem;">
+	        <section class="tabs-content">
+                  <article id="tabs-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel">
+                    <h2>Over Het Project</h2>
+		    <p>In samenwerking met Huisartsenpraktijk De Blauwe Jachthoorn en Hogeschool van Hall Larenstein te Velp, hebben wij de opdracht gekregen om een product te ontwikkelen gericht op het tegengaan van beginnende stress- en burn-outklachten, een probleem dat jaarlijks in omvang toeneemt. Hoewel de praktijk al stappen heeft gezet om meer natuur in hun sessies te integreren, zochten ze nog naar een preventieve aanpak.</p>
+		    <p>Na uitgebreid kwalitatief onderzoek hebben we besloten een flyer te ontwerpen die mensen aanmoedigt om contact te maken met de natuur. Op deze flyer zijn de vier seizoenen afgebeeld, voortkomend uit de BLOEI-cyclus, een veelgebruikte theorie in natuurcoaching. Tussen deze seizoenen staan verschillende oefeningen waar patiënten uit kunnen kiezen. Deze oefeningen zijn gebaseerd op ACT (acceptance and commitment therapy), maar met een speciale focus op het leggen van verbinding met de natuur.</p>
+		    <p>Via de onderstaande knop kunt u de flyer downloaden en in uw eigen praktijk verspreiden. We hopen hiermee een bijdrage te leveren aan de mentale gezondheid van iedereen.</p>
+                  </article>
+	        </section>
               </div>
             </div>
           </div>
@@ -119,7 +148,13 @@ https://www.tooplate.com/view/2113-earth
 
     <script type="text/javascript">
         $(document).ready(function() {
-	    window.scroll(0, 0);
+    		if (history.scrollRestoration) {
+    			history.scrollRestoration = 'manual';
+		} else {
+    			window.onbeforeunload = function () {
+        			window.scrollTo(0, 0);
+    			}
+		}
 
             // navigation click actions 
             $('.scroll-link').on('click', function(event){
