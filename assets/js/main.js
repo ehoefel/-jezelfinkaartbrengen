@@ -73,6 +73,8 @@ jQuery(document).ready(function($) {
 		document.displacementMethod = Math.floor(Math.random() * 4)
 
 
+		var values = [window.innerHeight, window.outerHeight, document.documentElement.clientHeight, $(window).height()];
+		alert(values);
 		alert(document.displacementMethod);
   
         function showSlide(n) {
