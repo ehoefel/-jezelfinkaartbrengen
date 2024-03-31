@@ -273,7 +273,7 @@ nav a::before {
 }
 .slides {
   width: 100vw;
-  height: 400vh;
+  height: calc(var(--vh, 1vh) * 400);
   -webkit-transition: -webkit-transform 0.8s ease;
   transition: -webkit-transform 0.8s ease;
   transition: transform 0.8s ease;
@@ -281,6 +281,7 @@ nav a::before {
 }
 .slides .slide {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   float: top;
   text-align: center;
@@ -350,6 +351,7 @@ nav a::before {
   margin-bottom: 0;
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
 }
 #image-slider ul li {
