@@ -70,6 +70,8 @@ jQuery(document).ready(function($) {
             
         
         $(function() {
+
+		alert(window.innerHeight, window.outerHeight, document.documentElement.clientHeight, $(window).height());
   
         function showSlide(n) {
             // n is relative position from current slide
