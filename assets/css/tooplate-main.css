@@ -502,13 +502,32 @@ nav a::before {
   margin-left: 60px;
   width: 585px;
   text-align: left;
-  display: content;
+  display: contents;
   background: none;
   margin-right: 30px;
   padding: 60px;
   margin-top: auto;
   margin-bottom: auto;
+  height: 100%;
+  overflow: hidden;
 }
+
+.slide:nth-child(4) .tabs-content {
+	display: block;
+}
+
+
+.tabs-content article {
+  box-shadow: 8px 8px 20px black;
+  background: #faf5b2;
+  overflow: scroll;
+  padding: 20px;
+  max-height: 100%;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  margin: 2rem;
+}
+
 .tabs-content h2 {
   font-size: 29px;
   text-transform: uppercase;
@@ -741,12 +760,14 @@ nav a::before {
   .tabs-content article {
     margin: 2rem 30px;
     padding: 20px;
-    box-shadow: 8px 8px 20px black;
-    background: #faf5b2;
-    overflow: scroll;
     max-height: 100%;
     padding-top: 2rem;
     padding-bottom: 6rem;
+  }
+
+  .tabs-content article#tabs-1 {
+    margin-left: auto;
+    padding-left: calc(min(20px, 3vw));
   }
 
   .tabs-content p {
@@ -766,6 +787,7 @@ nav a::before {
   #tabs ul li {
     display: inline-block;
     margin: 0px 10px;
+    flex-basis: 23%;
   }
   #tabs ul {
     float: none;
@@ -773,6 +795,9 @@ nav a::before {
     text-align: center;
     margin-bottom: 2rem;
     margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   #thumbnail ul li {
     max-width: 80px;
@@ -787,6 +812,7 @@ nav a::before {
     height: 60px;
     font-size: 22px;
     line-height: 54px;
+    transition: background-color 0.5s ease-in-out;
   }
   #tabs ul .ui-tabs-active span {
     line-height: 60px;
@@ -803,9 +829,8 @@ nav a::before {
     padding: 0;
     margin-top: auto;
     margin-bottom: auto;
-    height: 100%;
-    overflow: hidden;
   }
+
   .tabs-content h2 {
     font-size: 26px;
   }
