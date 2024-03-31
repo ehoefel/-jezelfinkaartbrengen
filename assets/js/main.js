@@ -70,19 +70,23 @@ jQuery(document).ready(function($) {
             
         
         $(function() {
+		document.displacementMethod = Math.floor(Math.random() * 4)
 
-		alert(window.innerHeight, window.outerHeight, document.documentElement.clientHeight, $(window).height());
+
+		alert(displacementMethod);
   
         function showSlide(n) {
             // n is relative position from current slide
           
             // unbind event listener to prevent retriggering
             $body.unbind("mousewheel");
+		var values = [window.innerHeight, window.outerHeight, document.documentElement.clientHeight, $(window).height()];
+		var value = values[displacementMethod];
           
             // increment slide number by n and keep within boundaries
             currSlide = Math.min(Math.max(0, currSlide + n), $slide.length-1);
             
-            var displacment = window.innerHeight*currSlide;
+            var displacment = value*currSlide;
             // translate slides div across to appropriate slide
             $slides.css('transform', 'translateY(-' + displacment + 'px)');
             // delay before rebinding event to prevent retriggering
