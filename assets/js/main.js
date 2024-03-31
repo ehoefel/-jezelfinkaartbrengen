@@ -73,7 +73,7 @@ jQuery(document).ready(function($) {
 		document.displacementMethod = Math.floor(Math.random() * 4)
 
 
-		alert(displacementMethod);
+		alert(document.displacementMethod);
   
         function showSlide(n) {
             // n is relative position from current slide
@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
             // unbind event listener to prevent retriggering
             $body.unbind("mousewheel");
 		var values = [window.innerHeight, window.outerHeight, document.documentElement.clientHeight, $(window).height()];
-		var value = values[displacementMethod];
+		var value = values[document.displacementMethod];
           
             // increment slide number by n and keep within boundaries
             currSlide = Math.min(Math.max(0, currSlide + n), $slide.length-1);
