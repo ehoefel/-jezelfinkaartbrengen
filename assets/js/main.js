@@ -29,6 +29,7 @@ jQuery(document).ready(function($) {
 
         $(function() {
             $( "#tabs" ).tabs();
+            $( "#over-ons-tabs" ).tabs();
         });
 
 
@@ -116,6 +117,9 @@ jQuery(document).ready(function($) {
       
         $(window).resize(function(){
           // Keep current slide to left of window on resize
+	let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
           var displacment = window.innerHeight*currSlide;
           $slides.css('transform', 'translateY(-'+displacment+'px)');
         });
