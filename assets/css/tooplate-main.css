@@ -864,25 +864,25 @@ nav a::before {
 }
 
 li:not(.ui-tabs-active) #ui-id-jessie span {
-    background-image: url(/assets/images/jessie.jpeg);
+    background-image: url(../images/jessie.jpeg);
     background-position: 156px 840px;
     background-size: 400px;
 }
 
 li:not(.ui-tabs-active) #ui-id-judi span {
-    background-image: url(/assets/images/judi.jpeg);
+    background-image: url(../images/judi.jpeg);
     background-position: 217px 369px;
     background-size: 700px;
 }
 
 li:not(.ui-tabs-active) #ui-id-merel span {
-    background-image: url(/assets/images/merel.jpeg);
+    background-image: url(../images/merel.jpeg);
     background-position: 90px 232px;
     background-size: 100px;
 }
 
 li:not(.ui-tabs-active) #ui-id-robin span {
-    background-image: url(/assets/images/robin.jpeg);
+    background-image: url(../images/robin.jpeg);
     background-position: 422px 827px;
     background-size: 300px;
 }
