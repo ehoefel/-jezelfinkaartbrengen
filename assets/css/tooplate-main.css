@@ -465,9 +465,34 @@ nav a::before {
   display: block;
   background-color: transparent;
 }
+
+.slide:nth-child(2) .ui-tabs ul {
+    margin-left: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.slide:nth-child(2) .ui-tabs ul li {
+  margin-top: -40%;
+  margin-left: 33%;
+}
+
+.slide:nth-child(2) .ui-tabs ul li:nth-child(2) {
+  margin-top: 25%;
+}
+
+.slide:nth-child(2) .ui-tabs ul li:nth-child(2n) {
+  margin-left: 0;
+}
+
 .ui-tabs ul li:last-child {
   margin-bottom: 0px;
 }
+
 .ui-tabs ul li a {
   display: block;
   cursor: pointer;
@@ -512,6 +537,12 @@ nav a::before {
   margin-bottom: auto;
   height: 100%;
   overflow: hidden;
+
+  display: block;
+  padding: 0;
+  padding-bottom: 60px;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .slide:nth-child(4) .tabs-content {
@@ -786,15 +817,15 @@ nav a::before {
     padding-bottom: 0;
     padding-left: 0;
   }
-  .ui-tabs ul li {
+  .ui-tabs ul li, .slide:nth-child(2) .ui-tabs ul {
     display: inline-block;
-    margin: 0px 10px;
+    margin: 0px 10px !important;
     flex-basis: 23%;
   }
   .slide:nth-child(3) .ui-tabs ul li {
     flex-basis: 0%;
   }
-  .ui-tabs ul {
+  .ui-tabs ul, .slide:nth-child(2) .ui-tabs ul {
     float: none;
     width: 100%;
     text-align: center;
@@ -833,7 +864,7 @@ nav a::before {
     margin: 0;
     padding: 0;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: 2rem;
   }
 
   .tabs-content h2 {
@@ -861,7 +892,6 @@ nav a::before {
     margin-bottom: 20px;
   }
 
-}
 
 li:not(.ui-tabs-active) #ui-id-jessie span {
     background-image: url(../images/jessie.jpeg);
@@ -885,4 +915,30 @@ li:not(.ui-tabs-active) #ui-id-robin span {
     background-image: url(../images/robin.jpeg);
     background-position: 422px 827px;
     background-size: 300px;
+}
+
+}
+
+li:not(.ui-tabs-active) #ui-id-jessie span {
+    background-image: url(../images/jessie.jpeg);
+    background-position: 204px 390px;
+    background-size: 500px;
+}
+
+li:not(.ui-tabs-active) #ui-id-judi span {
+    background-image: url(../images/judi.jpeg);
+    background-position: 287px 479px;
+    background-size: 900px;
+}
+
+li:not(.ui-tabs-active) #ui-id-merel span {
+    background-image: url(../images/merel.jpeg);
+    background-position: 137px 152px;
+    background-size: 150px;
+}
+
+li:not(.ui-tabs-active) #ui-id-robin span {
+    background-image: url(../images/robin.jpeg);
+    background-position: 568px 811px;
+    background-size: 400px;
 }
