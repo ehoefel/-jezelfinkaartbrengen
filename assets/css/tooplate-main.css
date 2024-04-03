@@ -449,7 +449,7 @@ nav a::before {
     flex-wrap: nowrap;
     justify-content: space-between;
     padding-left: 15%;
-    padding-bottom: 0;
+    padding-bottom: 2rem;
 }
 .ui-tabs ul {
   margin: 0;
@@ -460,8 +460,8 @@ nav a::before {
     margin-bottom: auto;
 }
 .ui-tabs ul li {
-  margin-top: 5px;
-  margin-bottom: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
   display: block;
   background-color: transparent;
 }
@@ -472,25 +472,8 @@ nav a::before {
     margin-bottom: 0;
     width: 20vw;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.slide:nth-child(2) .ui-tabs ul li {
-  margin-top: -40%;
-  margin-left: 33%;
-}
-
-.slide:nth-child(2) .ui-tabs ul li:nth-child(2) {
-  margin-top: 25%;
-}
-
-.slide:nth-child(2) .ui-tabs ul li:nth-child(2n) {
-  margin-left: 0;
-}
-
-.ui-tabs ul li:last-child {
-  margin-bottom: 0px;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .ui-tabs ul li a {
@@ -834,6 +817,7 @@ nav a::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-direction: row;
   }
   #thumbnail ul li {
     max-width: 80px;
