@@ -544,6 +544,10 @@ nav a::before {
   margin: 2rem;
 }
 
+.tabs-content article  img {
+  width: 100%;
+}
+
 .tabs-content h2 {
   font-size: 29px;
   text-transform: uppercase;
@@ -876,53 +880,24 @@ nav a::before {
     margin-bottom: 20px;
   }
 
-
-li:not(.ui-tabs-active) #ui-id-jessie span {
-    background-image: url(../images/jessie.jpeg);
-    background-position: 156px 840px;
-    background-size: 400px;
 }
 
-li:not(.ui-tabs-active) #ui-id-judi span {
-    background-image: url(../images/judi.jpeg);
-    background-position: 217px 369px;
-    background-size: 700px;
-}
-
-li:not(.ui-tabs-active) #ui-id-merel span {
-    background-image: url(../images/merel.jpeg);
-    background-position: 90px 232px;
-    background-size: 100px;
-}
-
-li:not(.ui-tabs-active) #ui-id-robin span {
-    background-image: url(../images/robin.jpeg);
-    background-position: 422px 827px;
-    background-size: 300px;
-}
-
+li:not(.ui-tabs-active) span {
+    background-size: contain;
 }
 
 li:not(.ui-tabs-active) #ui-id-jessie span {
-    background-image: url(../images/jessie.jpeg);
-    background-position: 204px 390px;
-    background-size: 500px;
+    background-image: url(../images/jessie_thumbnail.jpg);
 }
 
 li:not(.ui-tabs-active) #ui-id-judi span {
-    background-image: url(../images/judi.jpeg);
-    background-position: 287px 479px;
-    background-size: 900px;
+    background-image: url(../images/judi_thumbnail.jpg);
 }
 
 li:not(.ui-tabs-active) #ui-id-merel span {
-    background-image: url(../images/merel.jpeg);
-    background-position: 137px 152px;
-    background-size: 150px;
+    background-image: url(../images/merel_thumbnail.jpg);
 }
 
 li:not(.ui-tabs-active) #ui-id-robin span {
-    background-image: url(../images/robin.jpeg);
-    background-position: 568px 811px;
-    background-size: 400px;
+    background-image: url(../images/robin_thumbnail.jpg);
 }
